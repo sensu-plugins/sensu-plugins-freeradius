@@ -1,3 +1,3 @@
 # sensu-plugins-freeradius
 
-[ ![Codeship Status for sensu-plugins/sensu-plugins-couchdb](https://codeship.com/projects/8345d1d0-2e9d-0133-1ce3-3a2a4d3529b0/status?branch=master)](https://codeship.com/projects/99159)
+[ ![Codeship Status for sensu-plugins/sensu-plugins-freeradius](https://codeship.com/projects/39b0c220-2e9e-0133-f840-6a18900ed8b9/status?branch=master)](https://codeship.com/projects/99160)
