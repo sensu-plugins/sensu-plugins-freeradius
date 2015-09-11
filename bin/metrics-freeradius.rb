@@ -38,16 +38,19 @@ class FreeRADIUSMetrics < Sensu::Plugin::Metric::CLI::Graphite
          short: '-s SCHEME',
          long: '--scheme SCHEME',
          default: "#{Socket.gethostname}.freeradius"
+
   option :hostname,
          description: 'FreeRADIUS server hostname',
          short: '-h HOSTNAME',
          long: '--hostname HOSTNAME',
          default: 'localhost'
+
   option :port,
          description: 'FreeRADIUS status port',
          short: '-p PORT',
          long: '--port PORT',
          default: 18121
+
   option :secret,
          description: 'FreeRADIUS status secret',
          short: '-k SECRET',
