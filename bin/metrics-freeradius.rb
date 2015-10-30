@@ -49,7 +49,7 @@ class FreeRADIUSMetrics < Sensu::Plugin::Metric::CLI::Graphite
          description: 'FreeRADIUS status port',
          short: '-p PORT',
          long: '--port PORT',
-         default: 18121
+         default: 18_121
 
   option :secret,
          description: 'FreeRADIUS status secret',
@@ -65,7 +65,7 @@ class FreeRADIUSMetrics < Sensu::Plugin::Metric::CLI::Graphite
 
   def run
     metrics = {}
-    collect_status.each_line do |line|
+    collect_status.each_line do |line| # rubocop:disable Style/Next
       if line =~ /FreeRADIUS-Total/
         value = line.split(' ')[2]
         metrics['total_access_requests'] = value if line =~ /FreeRADIUS-Total-Access-Requests/
