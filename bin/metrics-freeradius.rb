@@ -65,7 +65,7 @@ class FreeRADIUSMetrics < Sensu::Plugin::Metric::CLI::Graphite
 
   def run
     metrics = {}
-    collect_status.each_line do |line| # rubocop:disable Style/Next
+    collect_status.each_line do |line|
       if line =~ /FreeRADIUS-Total/
         value = line.split(' ')[2]
         metrics['total_access_requests'] = value if line =~ /FreeRADIUS-Total-Access-Requests/
