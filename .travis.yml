@@ -1,19 +1,33 @@
 language: ruby
 cache:
-  - bundler
+- bundler
 install:
-  - bundle install
+- bundle install
 rvm:
-  - 1.9.3
-  - 2.0
-  - 2.1
-  - 2.2
+- 1.9.3
+- 2.0
+- 2.1
+- 2.2
 notifications:
   email:
     recipients:
-      - sensu-plugin@sensu-plugins.io
+    - sensu-plugin@sensu-plugins.io
     on_success: change
     on_failure: always
-
 script:
-  - 'bundle exec rake default'
+- bundle exec rake default
+- gem build sensu-plugins-freeradius.gemspec
+- gem install sensu-plugins-freeradius-*.gem
+deploy:
+  provider: rubygems
+  api_key:
+    secure: lS/xHesDrm8TuOaZSRhbjPwZMfcLlu8Fb3Rn/McAyUTXPPMGSUTqORvOtAQjlVgMjDNmck1Ry2PX/7USmIDkY7zbPJd/AiuG2A9vzEfMw48RVay9a3OAomxcQMc49XtTgwefa/obkkWE9PRvRvr4LJ5DNG0v2YGW13IndeNFNRFZN7bq5qAG03Z9QB2Mt6hdfvzBoo/LsjiHiVoATatKmnAgHt8+k9zAKlZ5BNx76jBkabBIhhsyHfL4pI1qFy5YpLxg8xAk0Jm80pWveFdKSHIZcKKk1D5rZzkvX8KewakS4t7+Ol6uVyg2nVCyErxwi5uxLi3DkoVrjNZZVHxd8Mrfv58PZTbvMWp1tizd5MRVqSEzNZi4K/kQCRUFSavz4T/V1rQdHxHPWz5qowVfe6tB1yIbE0ZlsAOkaCHuhebGRx9GlRyEBKcc5b8YmInX9ggXkKOp4j03V1zNbgcdrULotpHfp/BUfy8kFv6eIN01lTzBo8w+xllaMXJB0bdTJ4stfNb2pW5W4drVmcZOpXEfktNfXWHaaMuudUZdpEVEHlXIM1HG5nmLZ+CyERQXexKonEeNkRjTmkn4iZ/gLvbRz2wq3HNCIByMPziRpwv+009voBolI2fPnGT0yTJNyjy8a2Q9F19ltxhh9tBWfAzKIlZ4BNEsuemSgua2jDQ=
+  gem: sensu-plugins-freeradius
+  on:
+    tags: true
+    all_branches: true
+    rvm: 1.9.3
+    rvm: 2.0
+    rvm: 2.1
+    rvm: 2.2
+    repo: sensu-plugins/sensu-plugins-freeradius

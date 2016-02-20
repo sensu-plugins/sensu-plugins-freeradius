@@ -10,8 +10,8 @@ module SensuPluginsFreeradius
 
     VER_STRING = [MAJOR, MINOR, PATCH].compact.join('.')
 
-    NAME   = 'sensu-plugins-freeradius'
-    BANNER = "#{NAME} v%s"
+    NAME   = 'sensu-plugins-freeradius'.freeze
+    BANNER = "#{NAME} v%s".freeze
 
     module_function
 
