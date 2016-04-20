@@ -62,22 +62,15 @@ class CheckFreeRadiusRadclient < Sensu::Plugin::Check::CLI
          short: '-t',
          long: '--timeout VALUE',
          description: 'RADIUS timeout',
-         default: 1
+         default: 1,
+         proc: proc(&:to_i)
 
   option :retry,
          short: '-r',
          long: '--retry VALUE',
          description: 'RADIUS retries',
-         default: 1
-
-  option :help,
-         short: '-h',
-         long: '--help',
-         description: 'Check MySQL replication status',
-         on: :tail,
-         boolean: true,
-         show_options: true,
-         exit: 0
+         default: 1,
+         proc: proc(&:to_i)
 
   def run
     unknown 'Must specify host'     unless config[:host]
