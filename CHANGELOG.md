@@ -5,7 +5,7 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 
 ## [Unreleased]
 
-## 0.1.0 - 2016-04-18
+## 0.1.0 - 2016-04-20
 ### Added
 - check-freeradius-radclient.rb
 
