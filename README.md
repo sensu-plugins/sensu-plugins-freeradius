@@ -10,6 +10,7 @@
 
 ## Files
  * bin/metrics-freeradius.rb
+ * bin/check-freeradius-radclient.rb
 
 ## Usage
 
