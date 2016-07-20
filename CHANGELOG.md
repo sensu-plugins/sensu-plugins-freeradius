@@ -5,12 +5,13 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 
 ## [Unreleased]
 
-## 0.1.0 - 2016-04-20
+## [0.1.0] - 2016-04-20
 ### Added
 - check-freeradius-radclient.rb
 
-## 0.0.1 - 2015-11-25
+## [0.0.1] - 2015-11-25
 ### Added
 - initial release
 
-[Unreleased]: https://github.com/sensu-plugins/sensu-plugins-freeradius/compare/0.0.1...HEAD
+[Unreleased]: https://github.com/sensu-plugins/sensu-plugins-freeradius/compare/0.1.0...HEAD
+[0.1.0]: https://github.com/sensu-plugins/sensu-plugins-freeradius/compare/0.0.1...0.1.0
