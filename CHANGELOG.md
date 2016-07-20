@@ -7,6 +7,12 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 ### Changed
 - Update to rubocop 0.40 and cleanup
 
+### Added
+- Support for Ruby 2.3.0
+
+### Removed
+- Support for Ruby 1.9.3
+
 ## [0.1.0] - 2016-04-20
 ### Added
 - check-freeradius-radclient.rb
