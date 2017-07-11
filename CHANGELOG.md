@@ -11,6 +11,9 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 - Support for Ruby 2.3.0
 - Testing on Ruby 2.4.1
 
+### Breaking Changes
+- Updated sensu-plugin dependency to 2.0
+
 ### Removed
 - Support for Ruby 1.9.3
 
